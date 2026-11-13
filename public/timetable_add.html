@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>科目を追加する</title>
+</head>
+<body>
+    <h2>科目を追加する</h2>
+    <form action="/timetable_add">
+        <label for="id">科目ID</label>
+        <input type="number" name="id" id="id" required><br>
+
+        <label for="name">科目名</label>
+        <input type="text" name="name" id="name" required><br>
+
+        <label for="teacher">担当教員</label>
+        <input type="text" name="teacher" id="teacher"><br>
+
+        <label for="day">曜日</label>
+        <select name="day" id="day">
+            <option value="月">月</option>
+            <option value="火">火</option>
+            <option value="水">水</option>
+            <option value="木">木</option>
+            <option value="金">金</option>
+        </select><br>
+
+        <label for="period">時限</label>
+        <input type="number" name="period" id="period" min="1" max="5" required><br>
+
+        <label for="credit">単位数</label>
+        <input type="number" name="credit" id="credit" min="0" required><br>
+
+        <label for="room">教室</label>
+        <input type="text" name="room" id="room"><br>
+
+        <input type="submit" value="登録">
+    </form>
+    <a href="/timetable">一覧に戻る</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>履修科目一覧</title>
+</head>
+<body>
+  <h2>履修科目一覧</h2>
+  <table border="1">
+    <tr><th>曜日</th><th>時限</th><th>科目名</th></tr>
+      <% let number = 0 %>
+      <% for( let row of data ) { %>
+        <tr><td><%= row.day %></td>
+        <td><%= row.period %></td>
+        <td><a href="/timetable/<%= number %>"><%= row.name %></a></td></tr>
+        <% number += 1 %>
+      <% } %>
+  </table>
+  <a href="/public/timetable_add.html">科目を追加する</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= data.name %></title>
+</head>
+<body>
+  <h2><%= data.name %>の詳細</h2>
+  <table border="1">
+    <tr><th>項目</th><th>データ</th></tr>
+    <tr><td>科目ID</td><td><%= data.id %></td></tr>
+    <tr><td>科目名</td><td><%= data.name %></td></tr>
+    <tr><td>担当教員</td><td><%= data.teacher %></td></tr>
+    <tr><td>曜日</td><td><%= data.day %></td></tr>
+    <tr><td>時限</td><td><%= data.period %></td></tr>
+    <tr><td>単位数</td><td><%= data.credit %></td></tr>
+    <tr><td>教室</td><td><%= data.room %></td></tr>
+  </table>
+  <a href="/timetable_edit/<%= number %>">編集する</a>
+  <a href="/timetable_delete/<%= number %>" onclick="return confirm('この科目を削除しますか？')">削除する</a>
+  <br>
+  <a href="/timetable">一覧に戻る</a>
+</body>
+</html>
