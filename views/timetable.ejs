@@ -11,7 +11,7 @@
       <% let number = 0 %>
       <% for( let row of data ) { %>
         <tr><td><%= row.day %></td>
-        <td><%= row.period %></td>
+        <td><%= row.period %>〜<%= row.period_end %>限</td>
         <td><a href="/timetable/<%= number %>"><%= row.name %></a></td></tr>
         <% number += 1 %>
       <% } %>

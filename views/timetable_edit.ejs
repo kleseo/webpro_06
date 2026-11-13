@@ -23,8 +23,11 @@
       <% } %>
     </select><br>
 
-    <label for="period">時限</label>
-    <input type="number" name="period" id="period" min="1" max="5" value="<%= data.period %>" required><br>
+    <label for="period">開始時限</label>
+    <input type="number" name="period" id="period" min="1" max="10" value="<%= data.period %>" required><br>
+
+    <label for="period_end">終了時限</label>
+    <input type="number" name="period_end" id="period_end" min="1" max="10" value="<%= data.period_end %>" required><br>
 
     <label for="credit">単位数</label>
     <input type="number" name="credit" id="credit" min="0" value="<%= data.credit %>" required><br>

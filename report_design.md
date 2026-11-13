@@ -47,24 +47,26 @@ id | 数値 | 科目ID
 name | 文字列 | 科目名
 teacher | 文字列 | 担当教員名
 day | 文字列 | 曜日（月〜金）
-period | 数値 | 時限（1〜5）
+period | 数値 | 開始時限（1〜10）
+period_end | 数値 | 終了時限（1〜10）
 credit | 数値 | 単位数
 room | 文字列 | 教室
 
 ### 一覧画面に表示する項目
-曜日，時限，科目名
+曜日，時限（開始〜終了），科目名
 
 ### (1)(2)のパラメータ
 
 パラメータ名 | 属性 | 内容 | 値
 -|-|-|-
-id | number | 科目ID | 例：1
+id | number | 科目ID | 例：10
 name | text | 科目名 | 例：Webプログラミング
-teacher | text | 担当教員名 | 例：千葉太郎
-day | text | 曜日 | 月/火/水/木/金
-period | number | 時限 | 1〜5
+teacher | text | 担当教員名 | 例：須田宇宙
+day | select | 曜日 | 月/火/水/木/金
+period | number | 開始時限 | 1〜10（例：3）
+period_end | number | 終了時限 | 1〜10（例：4）
 credit | number | 単位数 | 例：2
-room | text | 教室 | 例：7号館 7301
+room | text | 教室 | 例：7104演習室（新習志野）
 
 ---
 

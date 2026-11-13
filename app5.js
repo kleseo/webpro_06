@@ -153,11 +153,17 @@ app.get("/keiyo2_add", (req, res) => {
 
 // 時間割・履修科目のデータ（本来ならDBに保存する）
 let timetable = [
-  { id:1, name:"Webプログラミング", teacher:"千葉太郎", day:"金", period:1, credit:2, room:"7号館 7301" },
-  { id:2, name:"データベース", teacher:"習志野花子", day:"月", period:2, credit:2, room:"6号館 6201" },
-  { id:3, name:"線形代数", teacher:"津田沼一郎", day:"火", period:3, credit:2, room:"2号館 2101" },
-  { id:4, name:"英語コミュニケーション", teacher:"幕張次郎", day:"水", period:1, credit:1, room:"4号館 4302" },
-  { id:5, name:"アルゴリズムとデータ構造", teacher:"新木場三郎", day:"木", period:4, credit:2, room:"7号館 7202" },
+  { id:1, name:"キャリアデザイン1", teacher:"柳瀬昌孝", day:"月", period:1, period_end:2, credit:1, room:"12号館3階教室兼実習室1（新習志野）" },
+  { id:2, name:"言語と文化2 ドイツ語", teacher:"岡田安樹浩", day:"月", period:3, period_end:4, credit:2, room:"7202講義室（新習志野）" },
+  { id:3, name:"英語理解2 aクラス", teacher:"坂井竜太郎", day:"月", period:6, period_end:7, credit:1, room:"5204講義室（新習志野）" },
+  { id:4, name:"データ通信", teacher:"水本旭洋", day:"火", period:1, period_end:2, credit:2, room:"3212演習室（新習志野）" },
+  { id:5, name:"データサイエンス", teacher:"三木大輔", day:"火", period:6, period_end:7, credit:2, room:"3212演習室（新習志野）" },
+  { id:6, name:"アジャイルワーク1", teacher:"三木大輔", day:"水", period:5, period_end:8, credit:2, room:"722演習室（津田沼）" },
+  { id:7, name:"微分積分", teacher:"東條晃次", day:"木", period:2, period_end:3, credit:2, room:"8108講義室（新習志野）" },
+  { id:8, name:"英語表現2 aクラス", teacher:"森創摩", day:"木", period:5, period_end:6, credit:1, room:"5303講義室（新習志野）" },
+  { id:9, name:"環境科学概論", teacher:"星永宏", day:"木", period:7, period_end:8, credit:2, room:"5208講義室（新習志野）" },
+  { id:10, name:"Webプログラミング", teacher:"須田宇宙", day:"金", period:3, period_end:4, credit:2, room:"7104演習室（新習志野）" },
+  { id:11, name:"アイディアソン 補習_1年生", teacher:"須田宇宙", day:"金", period:6, period_end:7, credit:2, room:"3212演習室（新習志野）" },
 ];
 
 // 一覧表示
@@ -173,6 +179,7 @@ app.get("/timetable_add", (req, res) => {
     teacher: req.query.teacher,
     day: req.query.day,
     period: Number( req.query.period ),
+    period_end: Number( req.query.period_end ),
     credit: Number( req.query.credit ),
     room: req.query.room,
   };
@@ -206,6 +213,7 @@ app.get("/timetable_update/:number", (req, res) => {
     teacher: req.query.teacher,
     day: req.query.day,
     period: Number( req.query.period ),
+    period_end: Number( req.query.period_end ),
     credit: Number( req.query.credit ),
     room: req.query.room,
   };
