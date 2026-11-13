@@ -1,0 +1,18 @@
+<!Doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>ポケモン一覧</title>
+</head>
+<body>
+  <h2>ポケモン一覧</h2>
+  <table>
+    <tr><th>ID</th><th>名前</th><th>タイプ</th></tr>
+    <% for( let row of data ) { %>
+      <tr><td><%= row.id %></td>
+      <td><%= row.name %></td>
+      <td><%= row.type %></td></tr>
+    <% } %>
+  </table>
+</body>
+</html>
